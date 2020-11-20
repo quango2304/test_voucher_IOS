@@ -13,6 +13,9 @@
 		6067E701256651B200E65455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6067E6FF256651B200E65455 /* Main.storyboard */; };
 		6067E703256651B400E65455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6067E702256651B400E65455 /* Assets.xcassets */; };
 		6067E706256651B400E65455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6067E704256651B400E65455 /* LaunchScreen.storyboard */; };
+		6067E70E2566529F00E65455 /* SDDSVoucher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067E70D2566529F00E65455 /* SDDSVoucher.swift */; };
+		6067E7122566530000E65455 /* SDDSVoucher.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6067E7112566530000E65455 /* SDDSVoucher.xib */; };
+		6067E716256678DB00E65455 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067E715256678DB00E65455 /* models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6067E702256651B400E65455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6067E705256651B400E65455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6067E707256651B400E65455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6067E70D2566529F00E65455 /* SDDSVoucher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDDSVoucher.swift; sourceTree = "<group>"; };
+		6067E7112566530000E65455 /* SDDSVoucher.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDDSVoucher.xib; sourceTree = "<group>"; };
+		6067E715256678DB00E65455 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				6067E702256651B400E65455 /* Assets.xcassets */,
 				6067E704256651B400E65455 /* LaunchScreen.storyboard */,
 				6067E707256651B400E65455 /* Info.plist */,
+				6067E70D2566529F00E65455 /* SDDSVoucher.swift */,
+				6067E7112566530000E65455 /* SDDSVoucher.xib */,
+				6067E715256678DB00E65455 /* models.swift */,
 			);
 			path = test_voucher;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			files = (
 				6067E706256651B400E65455 /* LaunchScreen.storyboard in Resources */,
 				6067E703256651B400E65455 /* Assets.xcassets in Resources */,
+				6067E7122566530000E65455 /* SDDSVoucher.xib in Resources */,
 				6067E701256651B200E65455 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6067E716256678DB00E65455 /* models.swift in Sources */,
 				6067E6FE256651B200E65455 /* ViewController.swift in Sources */,
+				6067E70E2566529F00E65455 /* SDDSVoucher.swift in Sources */,
 				6067E6FA256651B200E65455 /* AppDelegate.swift in Sources */,
 				6067E6FC256651B200E65455 /* SceneDelegate.swift in Sources */,
 			);
