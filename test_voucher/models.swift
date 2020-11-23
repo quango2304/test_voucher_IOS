@@ -95,10 +95,10 @@ public class VoucherActionButtonData {
 
 public class VoucherBadgeData {
     public var text: String?;
-    public var color: UIColor?;
+    public var background: UIColor?;
     init(text:String? = nil, color:UIColor? = nil) {
         self.text = text
-        self.color = color
+        self.background = color
     }
 }
 

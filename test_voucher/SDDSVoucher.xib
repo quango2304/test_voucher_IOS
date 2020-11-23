@@ -23,7 +23,9 @@
                 <outlet property="sub1Title" destination="Ewo-ct-wuy" id="8Ny-AV-Lac"/>
                 <outlet property="superView" destination="iN0-l3-epB" id="6dZ-SG-PAl"/>
                 <outlet property="tag1Text" destination="I6g-NX-hWG" id="Cga-83-QX2"/>
+                <outlet property="tag1View" destination="XWY-jD-alB" id="3JL-LL-JPx"/>
                 <outlet property="tag2Text" destination="Y00-18-dio" id="8NC-F6-NBR"/>
+                <outlet property="tag2View" destination="PaS-KH-dHM" id="5NC-Of-HdJ"/>
                 <outlet property="voucherCode" destination="ZOd-xf-hQD" id="dig-9I-rcd"/>
             </connections>
         </placeholder>
