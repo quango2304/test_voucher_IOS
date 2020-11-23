@@ -64,7 +64,6 @@ class SDDSVoucher: UIView {
     
     private func setupInitialUI() {
         //set shadow for view
-        showShadow()
         //set bagde
 //        self.badgeText.text = "123456789"
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
@@ -83,7 +82,7 @@ class SDDSVoucher: UIView {
         let _: VoucherData = VoucherData(
             type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle data", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111", tag2: "tag2222", actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), voucherCode: "vouhcercode", badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), isDisabled: false)
         let data2: VoucherData = VoucherData(
-            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle data", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
+            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle dataxzcvc", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
         bindData(data: data2)
     }
     
@@ -95,12 +94,12 @@ class SDDSVoucher: UIView {
         self.superView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
         self.superView.layer.shadowRadius = 8.0
         
-        self.shadowView.layer.shadowColor = UIColor.black.cgColor
-        self.shadowView.layer.shadowPath = UIBezierPath(rect: self.shadowView.bounds).cgPath
-        self.shadowView.layer.shouldRasterize = true
-        self.shadowView.layer.shadowOpacity = 0.04
-        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
-        self.shadowView.layer.shadowRadius = 4.0
+            self.shadowView.layer.shadowColor = UIColor.black.cgColor
+            self.shadowView.layer.shadowPath = UIBezierPath(rect: self.shadowView.bounds).cgPath
+            self.shadowView.layer.shouldRasterize = true
+            self.shadowView.layer.shadowOpacity = 0.04
+            self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
+            self.shadowView.layer.shadowRadius = 4.0
     }
     
     private func hideShadow() {
@@ -194,7 +193,9 @@ class SDDSVoucher: UIView {
             self.sub1Content.textColor = #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)
             self.actionButtonText.textColor = #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)
         } else {
-            showShadow()
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
+                self.showShadow()
+            }
         }
     }
 }

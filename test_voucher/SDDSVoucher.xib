@@ -53,7 +53,7 @@
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Sia-Wy-ieh" userLabel="Left">
                                     <rect key="frame" x="0.0" y="0.0" width="377" height="120"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voucherContainerFull" translatesAutoresizingMaskIntoConstraints="NO" id="imH-dt-FK9" userLabel="Image Left">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="imH-dt-FK9" userLabel="Image Left">
                                             <rect key="frame" x="0.0" y="0.0" width="377" height="120"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVF-6V-VtW" userLabel="Left Container">
@@ -129,12 +129,9 @@
                                                                         <constraint firstAttribute="height" constant="8" id="ciM-DY-QVm"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giảm 30K đơn từ 500K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iq-gt-uYY" userLabel="Main Text">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giảm 30K đơn từ 500K gh dfgh fdgh fdgh fgh dfgh" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iq-gt-uYY" userLabel="Main Text">
                                                                     <rect key="frame" x="0.0" y="36" width="353" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="22" id="1Ph-Ye-SW2"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -255,6 +252,9 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="ZsX-xw-OKL" secondAttribute="bottom" id="cV7-4k-53c"/>
+                                                            </constraints>
                                                         </stackView>
                                                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMy-cy-dD5" userLabel="space12">
                                                             <rect key="frame" x="365" y="0.0" width="12" height="120"/>
@@ -306,7 +306,7 @@
                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="97" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="R1a-HS-NU8" userLabel="Right">
                                     <rect key="frame" x="377" y="0.0" width="120" height="120"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorClassification" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-ub-1zu" userLabel="Image Right">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-ub-1zu" userLabel="Image Right">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osO-Xe-cOQ" userLabel="BadgeView">
@@ -444,8 +444,8 @@
         </view>
     </objects>
     <resources>
-        <image name="colorClassification" width="92" height="104"/>
+        <image name="left" width="285" height="88"/>
+        <image name="right" width="58" height="88"/>
         <image name="shopPlus" width="44" height="16"/>
-        <image name="voucherContainerFull" width="251" height="104"/>
     </resources>
 </document>
