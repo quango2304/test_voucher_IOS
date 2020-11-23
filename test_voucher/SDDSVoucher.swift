@@ -11,7 +11,24 @@ import QuartzCore
 
 class SDDSVoucher: UIView {
     private var voucherData:VoucherData?
+
+
+
+    
+    //super
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet var superView: UIView!
+    //left
+    @IBOutlet weak var leftContainer: UIView!
+    @IBOutlet weak var issuerAvatar: UIImageView!
+    @IBOutlet weak var issuerName: UILabel!
+    @IBOutlet weak var mainText: UILabel!
+    @IBOutlet weak var sub1Title: UILabel!
+    @IBOutlet weak var sub1Content: UILabel!
+    @IBOutlet weak var shopPlus: UIImageView!
+    @IBOutlet weak var tag1Text: UILabel!
+    @IBOutlet weak var tag2Text: UILabel!
+    //right
     @IBOutlet weak var badgeView: UIView!
     @IBOutlet weak var badgeText: UILabel!
     @IBOutlet weak var voucherCode: UILabel!
@@ -49,44 +66,28 @@ class SDDSVoucher: UIView {
         self.superView.layer.shadowColor = UIColor.black.cgColor
         self.superView.layer.shadowPath = UIBezierPath(rect: self.superView.bounds).cgPath
         self.superView.layer.shouldRasterize = true
-        self.superView.layer.shadowOpacity = 0.15
-        self.superView.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-        self.superView.layer.shadowRadius = 5.0
+        self.superView.layer.shadowOpacity = 0.12
+        self.superView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        self.superView.layer.shadowRadius = 8.0
+        
+        self.shadowView.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView.layer.shadowPath = UIBezierPath(rect: self.shadowView.bounds).cgPath
+        self.shadowView.layer.shouldRasterize = true
+        self.shadowView.layer.shadowOpacity = 0.04
+        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
+        self.shadowView.layer.shadowRadius = 4.0
+        
         //set bagde
         self.badgeText.text = "123456789"
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
+            self.badgeView.roundCorners(topLeft: 0, topRight: 10, bottomLeft: 15, bottomRight: 0)
+        }
         //voucher code
         self.voucherCode.text = "0x13456"
 
         //action button
         self.actionButtonText.text = "mua ngay"
-        //test
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
-            self.badgeView.roundCorners(corners: [.bottomLeft], radius: 10.0)
-        }
+        //leftContainer
        
     }
-    
 }
-
-extension UIView {
-    
-  func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-      let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-      let mask = CAShapeLayer()
-      mask.path = path.cgPath
-      layer.mask = mask
-  }
-    
-  @IBInspectable
-  var cornerRadius: CGFloat {
-      get {
-          return layer.cornerRadius
-      }
-      set {
-          layer.cornerRadius = newValue
-      }
-  }
-    
-   
-}
-
