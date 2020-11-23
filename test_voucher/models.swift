@@ -30,6 +30,7 @@ public class VoucherData {
     public var voucherCode: String?
     public var badge: VoucherBadgeData?
     public var isDisabled: Bool?
+    public var isSelected: Bool?
 
     init(type:VoucherType? = nil,
          issuer:VoucherIssuerData? = nil,
@@ -42,7 +43,7 @@ public class VoucherData {
          tag2:String? = nil,
          actionButton:VoucherActionButtonData? = nil,
          voucherCode:String? = nil,
-         badge:VoucherBadgeData? = nil, isDisabled: Bool? = nil) {
+         badge:VoucherBadgeData? = nil, isDisabled: Bool? = nil, isSelected: Bool? = false) {
      self.type = type
      self.issuer = issuer
      self.mainTitle = mainTitle
@@ -56,6 +57,7 @@ public class VoucherData {
      self.voucherCode = voucherCode
      self.badge = badge
      self.isDisabled = isDisabled
+     self.isSelected = isSelected
     }
 }
 
@@ -96,9 +98,9 @@ public class VoucherActionButtonData {
 public class VoucherBadgeData {
     public var text: String?;
     public var background: UIColor?;
-    init(text:String? = nil, color:UIColor? = nil) {
+    init(text:String? = nil, background:UIColor? = nil) {
         self.text = text
-        self.background = color
+        self.background = background
     }
 }
 

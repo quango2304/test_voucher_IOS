@@ -17,6 +17,7 @@
                 <outlet property="issuerName" destination="2Og-2d-iGl" id="LHo-fA-7co"/>
                 <outlet property="leftContainer" destination="GVF-6V-VtW" id="Urn-K3-tfc"/>
                 <outlet property="mainText" destination="9iq-gt-uYY" id="XXP-ZM-K7N"/>
+                <outlet property="selectedIndicator" destination="57H-17-XYQ" id="Eve-cP-L94"/>
                 <outlet property="shadowView" destination="bsO-IJ-AEL" id="KEO-5X-aaO"/>
                 <outlet property="shopPlus" destination="EH3-iy-VXi" id="x0F-ml-87U"/>
                 <outlet property="sub1Content" destination="pSN-b9-PRW" id="ryr-v3-Fhs"/>
@@ -331,7 +332,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xvR-nf-LRG">
+                                        <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xvR-nf-LRG">
                                             <rect key="frame" x="25" y="31" width="70" height="58"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HT15A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOd-xf-hQD" userLabel="Voucher Code">
@@ -363,7 +364,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="10"/>
+                                                            <real key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
