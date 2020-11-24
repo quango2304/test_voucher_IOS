@@ -9,8 +9,8 @@
 import UIKit
 import QuartzCore
 
-class SDDSVoucher: UIView {
-    private var voucherData:VoucherData?
+class SDDSVoucherCard2: UIView {
+    private var voucherData:SDDSVoucherCard2Data?
     //super
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet var superView: UIView!
@@ -47,7 +47,7 @@ class SDDSVoucher: UIView {
         self.configureView()
     }
     
-    public func bindData(data: VoucherData? = nil) {
+    public func bindData(data: SDDSVoucherCard2Data? = nil) {
         voucherData = data
         setupUIFromData(data: data)
     }
@@ -61,7 +61,7 @@ class SDDSVoucher: UIView {
     }
     
     func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: "SDDSVoucher", bundle: nil)
+        let nib = UINib(nibName: "SDDSVoucherCard2", bundle: nil)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
@@ -70,15 +70,15 @@ class SDDSVoucher: UIView {
         //set bagde
 //        self.badgeText.text = "123456789"
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
-            self.badgeView.roundCorners(topLeft: 0, topRight: 0, bottomLeft: 15, bottomRight: 0)
+            self.badgeView.roundCorners(corners: .bottomLeft, radius: 15.0)
         }
     }
     
     private func fakeUI() {
-        let _: VoucherData = VoucherData(
-            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle data", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111", tag2: "tag2222", actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), voucherCode: "vouhcercode", badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), isDisabled: false)
-        let data2: VoucherData = VoucherData(
-            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititlasdfddadsfasfasdfadsfasasdasdfasdgf", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: true, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
+        let _: SDDSVoucherCard2Data = SDDSVoucherCard2Data(
+            type: SDDSVoucherCard2Type.full, issuer: SDDSVoucherCard2IssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: SDDSVoucherCard2MainTitleData(title: "MainTititle data", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: SDDSVoucherCard2SubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111", tag2: "tag2222", actionButton: SDDSVoucherCard2ActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), voucherCode: "vouhcercode", badge: SDDSVoucherCard2BadgeData(text: "x10", background: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), isDisabled: false)
+        let data2: SDDSVoucherCard2Data = SDDSVoucherCard2Data(
+            type: SDDSVoucherCard2Type.full, issuer: SDDSVoucherCard2IssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: SDDSVoucherCard2MainTitleData(title: "MainTititlasdfddadsfasfasdfadsfasasdasdfasdgf", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: SDDSVoucherCard2SubItemData(title: "HSD", content: "00:00 23/04/1998", contentColor: #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)), isShopPlus: true, tag1: "tag1111" , actionButton: SDDSVoucherCard2ActionButtonData(text: "Mua ngay", disable: true, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: SDDSVoucherCard2BadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
         bindData(data: data2)
     }
     
@@ -114,7 +114,7 @@ class SDDSVoucher: UIView {
         self.shadowView.layer.shadowRadius = 0.0
     }
     
-    private func setupUIFromData(data: VoucherData? = nil) {
+    private func setupUIFromData(data: SDDSVoucherCard2Data? = nil) {
         //selected
         if(data?.isSelected == true) {
             self.selectedIndicator.isHidden = false

@@ -9,41 +9,41 @@
 import Foundation
 import UIKit
 
-public enum VoucherType {
+public enum SDDSVoucherCard2Type {
     case full
     case shortcut
 }
 
-public class VoucherData {
-    public var type: VoucherType?
+public class SDDSVoucherCard2Data {
+    public var type: SDDSVoucherCard2Type?
     //left part
-    public var issuer: VoucherIssuerData?
-    public var mainTitle: VoucherMainTitleData?
-    public var subItem1: VoucherSubItemData?
-    public var subItem2: VoucherSubItemData?
-    public var subItem3: VoucherSubItemData?
+    public var issuer: SDDSVoucherCard2IssuerData?
+    public var mainTitle: SDDSVoucherCard2MainTitleData?
+    public var subItem1: SDDSVoucherCard2SubItemData?
+    public var subItem2: SDDSVoucherCard2SubItemData?
+    public var subItem3: SDDSVoucherCard2SubItemData?
     public var isShopPlus: Bool?
     public var tag1: String?
     public var tag2: String?
     //right part
-    public var actionButton: VoucherActionButtonData?
+    public var actionButton: SDDSVoucherCard2ActionButtonData?
     public var voucherCode: String?
-    public var badge: VoucherBadgeData?
+    public var badge: SDDSVoucherCard2BadgeData?
     public var isDisabled: Bool?
     public var isSelected: Bool?
 
-    init(type:VoucherType? = nil,
-         issuer:VoucherIssuerData? = nil,
-         mainTitle:VoucherMainTitleData? = nil,
-         subItem1:VoucherSubItemData? = nil,
-         subItem2:VoucherSubItemData? = nil,
-         subItem3:VoucherSubItemData? = nil,
+    init(type:SDDSVoucherCard2Type? = nil,
+         issuer:SDDSVoucherCard2IssuerData? = nil,
+         mainTitle:SDDSVoucherCard2MainTitleData? = nil,
+         subItem1:SDDSVoucherCard2SubItemData? = nil,
+         subItem2:SDDSVoucherCard2SubItemData? = nil,
+         subItem3:SDDSVoucherCard2SubItemData? = nil,
          isShopPlus:Bool? = nil,
          tag1:String? = nil,
          tag2:String? = nil,
-         actionButton:VoucherActionButtonData? = nil,
+         actionButton:SDDSVoucherCard2ActionButtonData? = nil,
          voucherCode:String? = nil,
-         badge:VoucherBadgeData? = nil, isDisabled: Bool? = nil, isSelected: Bool? = false) {
+         badge:SDDSVoucherCard2BadgeData? = nil, isDisabled: Bool? = nil, isSelected: Bool? = false) {
      self.type = type
      self.issuer = issuer
      self.mainTitle = mainTitle
@@ -62,7 +62,7 @@ public class VoucherData {
 }
 
 
-public class VoucherMainTitleData {
+public class SDDSVoucherCard2MainTitleData {
     public var title: String?;
     public var color: UIColor?;
     init(title:String? = nil, color:UIColor? = nil) {
@@ -71,7 +71,7 @@ public class VoucherMainTitleData {
     }
 }
 
-public class VoucherSubItemData {
+public class SDDSVoucherCard2SubItemData {
     public var title: String?;
     public var content: String?;
     public var contentColor: UIColor?;
@@ -82,7 +82,7 @@ public class VoucherSubItemData {
     }
 }
 
-public class VoucherActionButtonData {
+public class SDDSVoucherCard2ActionButtonData {
     public var text: String?;
     public var disable: Bool?;
     public var textColor: UIColor?;
@@ -95,7 +95,7 @@ public class VoucherActionButtonData {
     }
 }
 
-public class VoucherBadgeData {
+public class SDDSVoucherCard2BadgeData {
     public var text: String?;
     public var background: UIColor?;
     init(text:String? = nil, background:UIColor? = nil) {
@@ -104,7 +104,7 @@ public class VoucherBadgeData {
     }
 }
 
-public class VoucherIssuerData {
+public class SDDSVoucherCard2IssuerData {
     public var issuerAvatar: String?
     public var issuerName: String?
     init(issuerAvatar:String? = nil, issuerName:String? = nil) {
