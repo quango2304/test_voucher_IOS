@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class SDDSVoucherCard2: UIView {
+public class SDDSVoucherCard2: UIView {
     private var voucherData:SDDSVoucherCard2Data?
     //super
     @IBOutlet weak var shadowView: UIView!
