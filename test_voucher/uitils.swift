@@ -11,7 +11,6 @@ import UIKit
 
 public class Utils {
     static func drawRectangle(view: UIView, rightWidth: CGFloat, cornerRadius: CGFloat, voucherCutRadius: CGFloat, backgroundColor: UIColor, borderColor: UIColor, dashColor: UIColor)  {
-        
         let path = UIBezierPath()
         let width: CGFloat = view.bounds.width
         let height: CGFloat = view.bounds.height
