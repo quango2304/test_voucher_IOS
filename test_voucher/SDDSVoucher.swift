@@ -15,6 +15,8 @@ class SDDSVoucher: UIView {
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet var superView: UIView!
     @IBOutlet weak var selectedIndicator: UIView!
+    @IBOutlet weak var roundCornerView: UIView!
+    @IBOutlet weak var voucherShape: VoucherShape!
     //left
     @IBOutlet weak var leftContainer: UIView!
     @IBOutlet weak var issuerAvatar: UIImageView!
@@ -47,7 +49,7 @@ class SDDSVoucher: UIView {
     
     public func bindData(data: VoucherData? = nil) {
         voucherData = data
-//        setupUIFromData(data: data)
+        setupUIFromData(data: data)
     }
     
     private func configureView() {
@@ -70,29 +72,13 @@ class SDDSVoucher: UIView {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
             self.badgeView.roundCorners(topLeft: 0, topRight: 0, bottomLeft: 15, bottomRight: 0)
         }
-        //voucher code
-//        self.voucherCode.text = "0x13456"
-
-        //action button
-//        self.actionButtonText.text = "mua ngay"
-        //leftContainer
-//        let containerView = UIView()
-//        containerView.frame = self.bounds
-//        self.shadowView.addSubview(containerView)
-//        Utils.drawRectangle(view:  containerView, rightWidth: 120, cornerRadius: 20, voucherCutRadius: 10, backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), borderColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0), dashColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-        self.containerView.removeFromSuperview()
-        self.containerView.frame = self.bounds
-        self.shadowView.addSubview(self.containerView)
-        Utils.drawRectangle(view:  self.containerView, rightWidth: 120, cornerRadius: 20, voucherCutRadius: 10, backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), borderColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0), dashColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-        showShadow()
-       
     }
     
     private func fakeUI() {
         let _: VoucherData = VoucherData(
             type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle data", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111", tag2: "tag2222", actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), voucherCode: "vouhcercode", badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), isDisabled: false)
         let data2: VoucherData = VoucherData(
-            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititlasdfddgf", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
+            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititlasdfddadsfasfasdfadsfasfasdgf", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: true, isSelected: false)
         bindData(data: data2)
     }
     
@@ -198,17 +184,19 @@ class SDDSVoucher: UIView {
         if(data?.isDisabled == true) {
             hideShadow()
             self.actionButtonView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+            self.tag1View.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.tag2View.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             self.actionButtonText.textColor = #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)
             self.mainText.textColor = #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)
             self.sub1Content.textColor = #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)
             self.actionButtonText.textColor = #colorLiteral(red: 0.7184622884, green: 0.7336550951, blue: 0.7498299479, alpha: 1)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
+                self.voucherShape.drawVouncher(rightWidth: 120, cornerRadius: 10, voucherCutRadius: 10, backgroundColor: #colorLiteral(red: 0.9491716027, green: 0.9530587792, blue: 0.9569777846, alpha: 1), borderColor: #colorLiteral(red: 0.8124228716, green: 0.8237156272, blue: 0.8317530155, alpha: 1), dashColor: #colorLiteral(red: 0.8124228716, green: 0.8237156272, blue: 0.8317530155, alpha: 1))
+            }
         } else {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
                 self.showShadow()
-                self.containerView.removeFromSuperview()
-                self.containerView.frame = self.bounds
-                self.shadowView.addSubview(self.containerView)
-                Utils.drawRectangle(view:  self.containerView, rightWidth: 120, cornerRadius: 20, voucherCutRadius: 10, backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), borderColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0), dashColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+                self.voucherShape.drawVouncher(rightWidth: 120, cornerRadius: 10, voucherCutRadius: 10, backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), borderColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), dashColor: #colorLiteral(red: 0.8124228716, green: 0.8237156272, blue: 0.8317530155, alpha: 1))
             }
         }
     }
