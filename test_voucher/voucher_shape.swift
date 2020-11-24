@@ -63,7 +63,6 @@ class VoucherShape: UIView {
         shapeLayer.strokeColor = dash_color.cgColor
         shapeLayer.lineWidth = 1
         shapeLayer.lineDashPattern = [7, 7] // 7 is the length of dash, 3 is length of the gap.
-
         let path = CGMutablePath()
         path.addLines(between: [p0, p1])
         shapeLayer.path = path
