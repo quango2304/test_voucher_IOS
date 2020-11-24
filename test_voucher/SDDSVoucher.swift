@@ -75,6 +75,10 @@ class SDDSVoucher: UIView {
         //action button
 //        self.actionButtonText.text = "mua ngay"
         //leftContainer
+        let containerView = UIView()
+        containerView.frame = self.bounds
+        self.shadowView.addSubview(containerView)
+        Utils.drawRectangle(view: containerView, rightWidth: 120, cornerRadius: 20, voucherCutRadius: 10, backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), borderColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0), dashColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
        
     }
     
@@ -82,7 +86,7 @@ class SDDSVoucher: UIView {
         let _: VoucherData = VoucherData(
             type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle data", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111", tag2: "tag2222", actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), voucherCode: "vouhcercode", badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), isDisabled: false)
         let data2: VoucherData = VoucherData(
-            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle dataxzcvc", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
+            type: VoucherType.full, issuer: VoucherIssuerData(issuerAvatar: "google.com", issuerName: "Quan"), mainTitle: VoucherMainTitleData(title: "MainTititle dataxzcvcasdfasdjfsadfgsdfsad", color: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), subItem1: VoucherSubItemData(title: "HSD", content: "00:00 23/04/1998"), isShopPlus: true, tag1: "tag1111" , actionButton: VoucherActionButtonData(text: "Mua ngay", disable: false, backgroundColor: #colorLiteral(red: 0.9962446094, green: 0.7653861642, blue: 0.01027479768, alpha: 1)), badge: VoucherBadgeData(text: "x10", background: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)), isDisabled: false, isSelected: false)
         bindData(data: data2)
     }
     
