@@ -89,13 +89,18 @@ public class SDDSVoucherCard2: UIView {
         self.superView.layer.shadowOpacity = 0.12
         self.superView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
         self.superView.layer.shadowRadius = 8.0
+        self.superView.layer.masksToBounds = false
+        self.superView.clipsToBounds = false
         
-            self.shadowView.layer.shadowColor = UIColor.black.cgColor
-            self.shadowView.layer.shadowPath = UIBezierPath(rect: self.shadowView.bounds).cgPath
-            self.shadowView.layer.shouldRasterize = true
-            self.shadowView.layer.shadowOpacity = 0.04
-            self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
-            self.shadowView.layer.shadowRadius = 4.0
+        self.shadowView.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView.layer.shadowPath = UIBezierPath(rect: self.shadowView.bounds).cgPath
+        self.shadowView.layer.shouldRasterize = true
+        self.shadowView.layer.shadowOpacity = 0.04
+        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
+        self.shadowView.layer.shadowRadius = 4.0
+        self.shadowView.layer.masksToBounds = false
+        self.shadowView.clipsToBounds = false
+
     }
     
     private func hideShadow() {
@@ -105,6 +110,8 @@ public class SDDSVoucherCard2: UIView {
         self.superView.layer.shadowOpacity = 0.0
         self.superView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         self.superView.layer.shadowRadius = 0.0
+        self.superView.layer.masksToBounds = false
+        self.superView.clipsToBounds = false
         
         self.shadowView.layer.shadowColor = UIColor.black.cgColor
         self.shadowView.layer.shadowPath = UIBezierPath(rect: self.shadowView.bounds).cgPath
@@ -112,6 +119,8 @@ public class SDDSVoucherCard2: UIView {
         self.shadowView.layer.shadowOpacity = 0.0
         self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         self.shadowView.layer.shadowRadius = 0.0
+        self.shadowView.layer.masksToBounds = false
+        self.shadowView.clipsToBounds = false
     }
     
     private func setupUIFromData(data: SDDSVoucherCard2Data? = nil) {

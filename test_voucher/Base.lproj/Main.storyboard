@@ -16,16 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-iL-gFa" customClass="SDDSVoucherCard2" customModule="SDDS">
-                                <rect key="frame" x="16" y="44" width="382" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2br-ZT-ald">
+                                <rect key="frame" x="0.0" y="382" width="414" height="132"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-iL-gFa" customClass="SDDSVoucherCard2" customModule="test_voucher">
+                                        <rect key="frame" x="12" y="6" width="390" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ISC-iL-gFa" secondAttribute="bottom" constant="6" id="FjJ-GY-Tbm"/>
+                                    <constraint firstAttribute="trailing" secondItem="ISC-iL-gFa" secondAttribute="trailing" constant="12" id="Y8l-1S-2Uz"/>
+                                    <constraint firstItem="ISC-iL-gFa" firstAttribute="top" secondItem="2br-ZT-ald" secondAttribute="top" constant="6" id="bH0-a7-3UX"/>
+                                    <constraint firstItem="ISC-iL-gFa" firstAttribute="leading" secondItem="2br-ZT-ald" secondAttribute="leading" constant="12" id="jEu-y1-ESn"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ISC-iL-gFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Fxg-f5-yrQ"/>
-                            <constraint firstItem="ISC-iL-gFa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lez-DG-aiV"/>
-                            <constraint firstItem="ISC-iL-gFa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-16" id="smd-tu-whR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2br-ZT-ald" secondAttribute="trailing" id="FGs-La-bAt"/>
+                            <constraint firstItem="2br-ZT-ald" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HKb-Rg-wsd"/>
+                            <constraint firstItem="2br-ZT-ald" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QXj-IM-eJt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

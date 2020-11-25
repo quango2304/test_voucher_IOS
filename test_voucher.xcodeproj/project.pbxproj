@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1DE9FFE520960332342AD11E /* Pods_test_voucher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1594BA86B67DADED4BF99D73 /* Pods_test_voucher.framework */; };
+		601E7E4F256DFF3100C2EA9D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E7E4D256DFF3100C2EA9D /* TableViewCell.swift */; };
+		601E7E50256DFF3100C2EA9D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E7E4E256DFF3100C2EA9D /* TableViewCell.xib */; };
 		6067E6FA256651B200E65455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067E6F9256651B200E65455 /* AppDelegate.swift */; };
 		6067E6FC256651B200E65455 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067E6FB256651B200E65455 /* SceneDelegate.swift */; };
 		6067E6FE256651B200E65455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067E6FD256651B200E65455 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		036FB1B3B9A7706C97A7332D /* Pods-test_voucher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_voucher.debug.xcconfig"; path = "Target Support Files/Pods-test_voucher/Pods-test_voucher.debug.xcconfig"; sourceTree = "<group>"; };
 		1594BA86B67DADED4BF99D73 /* Pods_test_voucher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_voucher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A82BA5C4F31AA8FD380AAA /* Pods-test_voucher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_voucher.release.xcconfig"; path = "Target Support Files/Pods-test_voucher/Pods-test_voucher.release.xcconfig"; sourceTree = "<group>"; };
+		601E7E4D256DFF3100C2EA9D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		601E7E4E256DFF3100C2EA9D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		6067E6F6256651B200E65455 /* test_voucher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_voucher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6067E6F9256651B200E65455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6067E6FB256651B200E65455 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				6067E715256678DB00E65455 /* models.swift */,
 				60901D6E256B5B7D00FF6418 /* extensions.swift */,
 				60A66A8A256CACA6004F39A8 /* CustomVoucherShape.swift */,
+				601E7E4D256DFF3100C2EA9D /* TableViewCell.swift */,
+				601E7E4E256DFF3100C2EA9D /* TableViewCell.xib */,
 			);
 			path = test_voucher;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6067E706256651B400E65455 /* LaunchScreen.storyboard in Resources */,
+				601E7E50256DFF3100C2EA9D /* TableViewCell.xib in Resources */,
 				6067E703256651B400E65455 /* Assets.xcassets in Resources */,
 				6067E7122566530000E65455 /* SDDSVoucherCard2.xib in Resources */,
 				6067E701256651B200E65455 /* Main.storyboard in Resources */,
@@ -223,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6067E716256678DB00E65455 /* models.swift in Sources */,
+				601E7E4F256DFF3100C2EA9D /* TableViewCell.swift in Sources */,
 				6067E6FE256651B200E65455 /* ViewController.swift in Sources */,
 				60A66A8B256CACA6004F39A8 /* CustomVoucherShape.swift in Sources */,
 				6067E70E2566529F00E65455 /* SDDSVoucherCard2.swift in Sources */,
